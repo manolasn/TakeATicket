@@ -1,0 +1,225 @@
+<resources>
+    <string name="app_name">TakeATicket</string>
+
+    <!--    bottom nav    -->
+    <string name="bottomNav_home">Home</string>
+    <string name="bottomNav_favorites">Favorites</string>
+    <string name="bottomNav_news">News</string>
+    <string name="bottomNav_stores">Stores</string>
+    <string name="bottomNav_more">More</string>
+
+
+    <!--    Filter Real Estate  -->
+    <string name="viewed">Viewed</string>
+    <string name="modify_date">Modify Date</string>
+    <string name="create_time_ascending">Create Time (Ascending)</string>
+    <string name="create_time_descending">Create Time (Descending)</string>
+    <string name="price_ascending">Price (Ascending)</string>
+    <string name="price_descending">Price (Descending)</string>
+    <string name="area_increment">Area (Increment)</string>
+    <string name="area_reduced">Area (Reduced)</string>
+    <string name="price_sq_m_ascenting">Price/Sq.m. (Ascending)</string>
+    <string name="price_sq_m_descenting">Price/Sq.m. (Descending)</string>
+
+    <!--    Home Screen Toolbar -->
+    <string name="rent">Rent</string>
+    <string name="sale">Sale</string>
+    <string name="homes">Homes</string>
+    <string name="professionals">Professionals</string>
+    <string name="plots_land">Plots-Land</string>
+    <string name="land">Land</string>
+    <string name="search_area">Search area…</string>
+    <string name="search_area_label">Search Area</string>
+    <string name="price_range">Price Range</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="search">SEARCH</string>
+    <string name="search_title">Search</string>
+    <string name="search_filter">Search filters</string>
+    <string name="filter_title">FILTERS</string>
+    <string name="apply">APPLY</string>
+    <string name="basic_information">Basic Information</string>
+    <string name="basic_information_complete">Fill in the Basic Information and continue to the next step!</string>
+    <string name="location_information">Location, Street</string>
+    <string name="location_information_complete">Fill in the address and exact location on the map.</string>
+    <string name="please_wait">Please wait</string>
+
+    <!--    Home Screen Toolbar Filters-->
+    <string name="bedrooms">Bedrooms</string>
+    <string name="bathrooms">Bathrooms</string>
+    <string name="parkings">Parkings</string>
+    <string name="yearBuilt">Built Year</string>
+    <string name="none">-</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="ten">10</string>
+    <string name="benefits">Benefits</string>
+    <string name="internal_stair">Internal stair</string>
+    <string name="furnished">Furnished</string>
+    <string name="fireplace">Fireplace</string>
+    <string name="air_cnditioning">Air conditioning</string>
+    <string name="solar_water_heet">Solar water heet</string>
+    <string name="night_current">Night current</string>
+    <string name="storage">Storage</string>
+
+    <!-- Home screen -->
+    <string name="proposed_properties">PROPOSED PROPERTIES</string>
+    <string name="popular_properties">POPULAR PROPERTIES</string>
+    <string name="see_more">See more &gt;</string>
+    <string name="property_assignment">PROPERTY ASSIGNMENT</string>
+    <string name="property_assignment_lowercase">Property Assignment</string>
+
+    <!-- Property Assignment -->
+    <string name="price">Price</string>
+    <string name="square">Square</string>
+    <string name="floor">Floor</string>
+    <string name="prefecture_municipality">Prefecture / Municipality</string>
+    <string name="area">Area</string>
+    <string name="address">Address</string>
+    <string name="property_location">Property location</string>
+    <string name="property_pointer_message">Drag the pointer to the property position</string>
+    <string name="insert_photos">Insert Photos</string>
+    <string name="insert_photos_message">Enter up to 30 photos</string>
+    <string name="choose_photos">Choose photos</string>
+    <string name="insert_videos">Insert Videos</string>
+    <string name="choose_videos">Choose videos</string>
+    <string name="comments">Comments</string>
+    <string name="comments_message">Please fill in any comments before submitting.</string>
+    <string name="write_here">Write here</string>
+    <string name="read_and_agreed">I have read and agree with the </string>
+    <string name="terms_of_use_small">terms of use</string>
+    <string name="of_service"> of service</string>
+    <string name="assignment_was_sent_title">Your request has been sent!</string>
+    <string name="assignment_was_sent_body">A representative of ours will contact you shortly</string>
+    <string name="assignment_was_sent_please_connect_message">Enjoy the complete experience by logging in or registering in the app</string>
+    <string name="assignment_was_sent_body_text">Login / Register</string>
+    <string name="shared_link_subject">Please share the URL link.</string>
+
+    <!-- Favorite screen -->
+    <string name="connect">Connect</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_pwd">Did you forget your password?</string>
+    <string name="restore">Restore</string>
+    <string name="restore_password">Restore password</string>
+    <string name="restore_password_explanation">Enter your email address and we will send you a new password.</string>
+    <string name="verify_email">Email verification</string>
+    <string name="verify_email_explanation">Click the link in the email we just sent you to confirm your email address.</string>
+    <string name="done">Done</string>
+    <string name="send_again">Send again</string>
+    <string name="restore_upper_case">RESTORE</string>
+    <string name="signup">Signup</string>
+    <string name="or">Or</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="phone">Phone</string>
+    <string name="no_favorites">There are no favorite properties.</string>
+    <string name="favorites_please_connect">Log in to access your favorite properties.</string>
+
+    <!--    More Screen    -->
+    <string name="my_account">My account</string>
+    <string name="my_properties">My properties</string>
+    <string name="language">Language</string>
+    <string name="terms_of_use">Terms Of Use</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="about_us">About Us</string>
+    <string name="logout">Logout</string>
+    <string name="login">Login</string>
+    <string name="edit">Edit</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="edit_account">Edit Account</string>
+    <string name="change_password">Change password</string>
+    <string name="greek">Greek</string>
+    <string name="english">English</string>
+    <string name="more_password">User Password</string>
+    <string name="more_new_user_password">New user Password</string>
+    <string name="more_confirm_new_user_password">Confirm new user Password</string>
+
+
+    <!--    Property Details Screen    -->
+    <string name="description">Description</string>
+    <string name="interior">Interior</string>
+    <string name="exterior">Exterior</string>
+    <string name="construction">Construction</string>
+    <string name="property_code">Property Code</string>
+    <string name="location">Location</string>
+    <string name="watch_video">Watch the video</string>
+    <string name="watch_360">Watch in 360°</string>
+    <string name="interested_prompt">Interested in this property?</string>
+    <string name="appointment">MAKE AN APPOINTMENT</string>
+    <string name="send">Send</string>
+    <string name="transaction">Transaction</string>
+    <string name="kind">Kind</string>
+    <string name="category">Category</string>
+    <string name="studio_apartment">Studio apartment</string>
+    <string name="apartment">Apartment</string>
+    <string name="building">Building</string>
+    <string name="maisonette_independent">Maisonette Independent</string>
+    <string name="maisonette_tangent">Maisonette Tangent</string>
+    <string name="house">House</string>
+    <string name="surrounding_area">Surrounding Area</string>
+    <string name="surrounding_areas_specific">Near a school | Near a Market | Close to Center</string>
+
+    <!--   Shared     -->
+    <string name="per_month">/month</string>
+
+    <!-- Benefits -->
+    <string name="plot_of_land">Plot of land</string>
+    <string name="open">Open</string>
+    <string name="warehouse">Warehouse</string>
+    <string name="industrial_area">Industrial Area</string>
+    <string name="industrial_space">Industrial Space</string>
+    <string name="studio_apartment_benefit">Studio Apartment</string>
+    <string name="office">Office</string>
+    <string name="apartment_benefit">Apartment</string>
+    <string name="area_benefit">Area</string>
+    <string name="occupation_plot">Occupation Plot</string>
+
+    <!-- My Account -->
+    <string name="my_account_success">Your account was updated successfully!</string>
+    <string name="my_account_error">Something went wrong, please try to logout and login again!</string>
+    <string name="my_account_delete">Are you sure you want to delete your account?</string>
+    <string name="my_account_delete_accept">Yes</string>
+    <string name="my_account_delete_deny">No</string>
+
+    <!-- My Password -->
+    <string name="my_password_success">Your password changed successfully!</string>
+    <string name="my_password_error">Your password couldn\'t change, please try to logout and login again!</string>
+
+    <string name="investment">Investment</string>
+    <string name="shop">Shop</string>
+    <string name="closed">Closed</string>
+    <string name="building_benefit">Building</string>
+    <string name="maisonette_independent_benefit">Maisonette Independent</string>
+    <string name="maisonette_tangent_benefit">Maisonette Tangent</string>
+    <string name="single_house">Single House</string>
+    <string name="island">Island</string>
+    <string name="hotel">Hotel</string>
+    <string name="floor_apartment">Floor Apartment</string>
+    <string name="parking">Parking</string>
+    <string name="sale_of_business">Sale of Business</string>
+    <string name="penthouse">Penthouse</string>
+    <string name="compare_of_residences">Compare of residences</string>
+    <string name="basement">Basement</string>
+    <string name="low_office">low Office</string>
+    <string name="house_benefit">House</string>
+    <string name="forest_area">Forest Area</string>
+    <string name="pillar">Pillar</string>
+    <string name="autonomus_building">Autonomus Building</string>
+    <string name="maisonette">Maisonette</string>
+    <string name="floor_maisonette">Floor maisonette</string>
+    <string name="residential">Residential</string>
+    <string name="hall">Hall</string>
+    <string name="gym">Gym</string>
+    <string name="gallery">Gallery</string>
+    <string name="professional_building">Professional Building</string>
+    <string name="factory">Factory</string>
+    <string name="bar_restaurant">Bar - Restaurant</string>
+</resources>
