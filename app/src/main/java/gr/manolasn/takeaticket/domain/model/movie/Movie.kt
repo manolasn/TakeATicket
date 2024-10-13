@@ -1,11 +1,12 @@
 package gr.manolasn.takeaticket.domain.model.movie
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 
 @Entity(tableName = "movies")
 data class Movie(
-    val id: String = String(),
+    @PrimaryKey val id: String = String(),
     val movieName: String = String(),
     val rating: String = String(),
     val releaseDate: String = String(),

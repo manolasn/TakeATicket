@@ -1,4 +1,4 @@
-package gr.manolasn.takeaticket.data.database
+package gr.manolasn.takeaticket.data.localDatabase
 
 import android.content.Context
 import androidx.room.Database
