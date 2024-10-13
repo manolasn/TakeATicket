@@ -1,10 +1,12 @@
-package gr.manolasn.takeaticket.data.database
+package gr.manolasn.takeaticket.data.localDatabase
 
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import gr.manolasn.takeaticket.domain.model.movie.Movie
 
+@Dao
 interface MovieDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(movie: Movie)
