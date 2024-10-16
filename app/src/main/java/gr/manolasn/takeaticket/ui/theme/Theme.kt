@@ -1,6 +1,5 @@
 package gr.manolasn.takeaticket.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -13,18 +12,18 @@ import androidx.compose.ui.platform.LocalContext
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 private val DarkColorScheme = darkColorScheme(
-    primary = AppGrey,
-    secondary = AppYellow,
-    tertiary = AppGrey,
-    background = AppGrey
+    primary = AppGreyBlack,
+    secondary = AppTeal,
+    tertiary = AppGreyBlack,
+    background = AppGreyBlack
 
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = AppGrey,
-    secondary = AppYellow,
-    tertiary = AppGrey,
-    background = AppGrey
+    primary = AppGreyBlack,
+    secondary = AppTeal,
+    tertiary = AppGreyBlack,
+    background = AppGreyBlack
 )
 @Composable
 fun TakeATicketTheme(
@@ -36,11 +35,11 @@ fun TakeATicketTheme(
     val systemUiController = rememberSystemUiController()
     if(darkTheme){
         systemUiController.setSystemBarsColor(
-            color = AppGrey
+            color = AppGreyBlack
         )
     }else {
         systemUiController.setSystemBarsColor(
-            color = AppGrey
+            color = AppGreyBlack
         )
     }
     val colorScheme = when {

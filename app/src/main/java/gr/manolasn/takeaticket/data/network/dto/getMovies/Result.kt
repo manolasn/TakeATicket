@@ -3,7 +3,7 @@ package gr.manolasn.takeaticket.data.network.dto.getMovies
 import android.os.Build
 import androidx.annotation.RequiresApi
 import gr.manolasn.takeaticket.common.utils.Transformations
-import gr.manolasn.takeaticket.domain.model.movie.Movie
+import gr.manolasn.takeaticket.domain.model.movie.getmovies.Movie
 
 data class Result(
     val adult: Boolean?,
@@ -26,7 +26,7 @@ data class Result(
 fun Result.toDomain(): Movie {
     return Movie(
         id = id.toString(),
-        movieName = original_title?:"",
+        movieName = title?:"",
         shortDescription = overview?:"",
         rating = Transformations.formatDouble(vote_average ?: 0.0),
         releaseDate = Transformations.formatDateString(release_date?:"",),

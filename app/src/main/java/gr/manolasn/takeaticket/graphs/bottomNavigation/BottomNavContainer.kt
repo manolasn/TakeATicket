@@ -1,15 +1,11 @@
 package gr.manolasn.takeaticket.graphs.bottomNavigation
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.RowScope
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material.ripple.LocalRippleTheme
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -23,7 +19,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -35,8 +30,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import gr.manolasn.takeaticket.common.utils.NoRippleTheme
-import gr.manolasn.takeaticket.ui.theme.AppGrey
-import gr.manolasn.takeaticket.ui.theme.AppYellow
+import gr.manolasn.takeaticket.ui.theme.AppGreyBlack
+import gr.manolasn.takeaticket.ui.theme.AppTeal
 import gr.manolasn.takeaticket.ui.theme.White
 
 @Composable
@@ -73,7 +68,7 @@ fun BottomBar(
 
     if (bottomBarDestinationScreen) {
         NavigationBar(
-            containerColor = AppGrey, tonalElevation = 16.dp
+            containerColor = AppGreyBlack, tonalElevation = 16.dp
         ) {
             screens.forEach { screen ->
                 AddItem(
@@ -110,7 +105,7 @@ fun RowScope.AddItem(
                     if (isSelected) {
                         Icon(
                             painter = painterResource(id = screen.iconResourceIdSelected),
-                            tint = AppYellow,
+                            tint = AppTeal,
                             contentDescription = "Selected",
                             modifier = Modifier
                                 .size(24.dp)
@@ -120,7 +115,7 @@ fun RowScope.AddItem(
                             text = stringResource(id = screen.titleResourceId),
                             textAlign = TextAlign.Center,
                             fontSize = 12.sp,
-                            color = AppYellow
+                            color = AppTeal
                         )
 
                     } else {
@@ -140,7 +135,7 @@ fun RowScope.AddItem(
                     }
                 }
             }, interactionSource = interactionSource, colors = NavigationBarItemDefaults.colors(
-                indicatorColor = White, selectedIconColor = AppYellow
+                indicatorColor = White, selectedIconColor = AppTeal
             )
         )
     }

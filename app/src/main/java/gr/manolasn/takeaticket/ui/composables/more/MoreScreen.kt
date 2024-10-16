@@ -22,20 +22,18 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import gr.manolasn.takeaticket.App
+import gr.manolasn.takeaticket.BuildConfig
 import gr.manolasn.takeaticket.R
 import gr.manolasn.takeaticket.ui.composables.shared.MoreScreenItem
 import gr.manolasn.takeaticket.ui.composables.shared.TopBar
-import gr.manolasn.takeaticket.ui.theme.AppGrey
+import gr.manolasn.takeaticket.ui.theme.AppGreyBlack
 import gr.manolasn.takeaticket.ui.theme.Typography
 
 @Composable
 fun MoreScreen(
     title : Int,
-    goToMyAccount: () -> Unit = {},
-    goToMyProperties: () -> Unit = {},
-    goToInfo: (String) -> Unit = {},
-    goToHomePage: () -> Unit = {}
+    goToInfo: (String) -> Unit ,
+
 ) {
 
     val uriHandler = LocalUriHandler.current
@@ -43,7 +41,7 @@ fun MoreScreen(
     TopBar(
         title = stringResource(id = title),
         hasNavigation = false,
-        topBarContainerColor = AppGrey,
+        topBarContainerColor = AppGreyBlack,
         textColor = Color.White
     ) {
         Column(
@@ -66,12 +64,6 @@ fun MoreScreen(
                     goToInfo(R.string.privacy_policy.toString())
                 })
 
-            Spacer(modifier = Modifier.height(13.dp))
-
-            MoreScreenItem(text = R.string.about_us, icon = R.drawable.about_us, onClick = {
-                goToInfo(R.string.about_us.toString())
-            })
-
             Spacer(modifier = Modifier.height(50.dp))
 
             Column(
@@ -82,13 +74,13 @@ fun MoreScreen(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
-                    text = "v.${"1.0.0"}", style = Typography.labelMedium, color = AppGrey
+                    text = "v.${BuildConfig.VERSION_NAME}", style = Typography.labelMedium, color = AppGreyBlack
                 )
 
                 Spacer(modifier = Modifier.height(2.dp))
 
                 Text(
-                    text = "Made by", style = Typography.labelSmall, color = AppGrey
+                    text = "Made by", style = Typography.labelSmall, color = AppGreyBlack
                 )
 
                 Spacer(modifier = Modifier.height(2.dp))
@@ -100,7 +92,7 @@ fun MoreScreen(
                     Text(
                         text = "Manolas Nikiforos©",
                         style = Typography.labelSmall,
-                        color = AppGrey
+                        color = AppGreyBlack
                     )
                     Image(
                         modifier = Modifier.clickable {

@@ -1,28 +1,37 @@
 package gr.manolasn.takeaticket.ui.composables.home
 
 import android.util.Log
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Search
+import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import gr.manolasn.takeaticket.ui.composables.shared.LazyColumnItem
 import gr.manolasn.takeaticket.ui.composables.shared.LoadedView
 import gr.manolasn.takeaticket.ui.composables.shared.TopBar
 import gr.manolasn.takeaticket.ui.composables.shared.rememberScrollContext
-import gr.manolasn.takeaticket.ui.theme.AppGrey
+import gr.manolasn.takeaticket.ui.theme.AppGreyBlack
+import gr.manolasn.takeaticket.ui.theme.AppTeal
 
 @Composable
 fun HomeScreen(
-    title: Int, movieClicked: (String) -> Unit, viewModel: HomeViewModel = hiltViewModel()
+    title: Int,
+    movieClicked: (String) -> Unit,
+    searchClicked: () -> Unit,
+    viewModel: HomeViewModel = hiltViewModel()
 ) {
 
 
@@ -40,10 +49,20 @@ fun HomeScreen(
 
 
     TopBar(
+        title = stringResource(id = title),
+        topBarContainerColor = AppGreyBlack,
+        hasNavigation = false,
+        action = {
 
-        title = stringResource(
-            id = title
-        ), topBarContainerColor = AppGrey, hasNavigation = false
+            IconButton(onClick = searchClicked) {
+                Image(
+                    imageVector = Icons.Rounded.Search,
+                    colorFilter = ColorFilter.tint(AppTeal),
+                    contentDescription = "SearchIcon"
+                )
+            }
+
+        }
     ) {
 
         LoadedView(loading) {

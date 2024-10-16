@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.IconButton
@@ -22,8 +23,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.unit.dp
-import gr.manolasn.takeaticket.ui.theme.AppGrey
-import gr.manolasn.takeaticket.ui.theme.AppYellow
+import gr.manolasn.takeaticket.ui.theme.AppGreyBlack
+import gr.manolasn.takeaticket.ui.theme.AppTeal
 import gr.manolasn.takeaticket.ui.theme.SetStatusBarColor
 import gr.manolasn.takeaticket.ui.theme.Typography
 import gr.manolasn.takeaticket.ui.theme.White
@@ -33,7 +34,7 @@ import gr.manolasn.takeaticket.ui.theme.White
 fun TopBar(
     title:String,
     onBackClick: () -> Unit={},
-    topBarContainerColor: Color = AppGrey,
+    topBarContainerColor: Color = AppGreyBlack,
     containerColor: Color = Color.White,
     textColor:Color= Color.White,
     action: @Composable (RowScope.() -> Unit) = {},
@@ -71,14 +72,14 @@ fun TopBar(
                         IconButton(onClick = { onBackClick() }) {
                             Image(
                                 imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                                colorFilter = ColorFilter.tint(AppYellow),
+                                colorFilter = ColorFilter.tint(AppTeal),
                                 contentDescription = "BackArrow"
                             )
                         }
                     }
                 },
                 colors = topAppBarColors(
-                    containerColor = if (isLoading) Color.White else topBarContainerColor
+                    containerColor = if (isLoading) White else topBarContainerColor
                 ),
                 actions = action
             )
