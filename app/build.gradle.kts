@@ -38,11 +38,13 @@ android {
             buildConfigField("String", "BASE_URL", externalProperties["base_url"].toString())
             buildConfigField("String", "ACCESS_TOKEN", externalProperties["access_token"].toString())
             buildConfigField("String", "IMAGE_URL", externalProperties["image_url"].toString())
+            buildConfigField("String", "IMAGE_URL_FULL", externalProperties["image_url_full"].toString())
         }
         debug {
             buildConfigField("String", "BASE_URL", externalProperties["base_url"].toString())
             buildConfigField("String", "ACCESS_TOKEN", externalProperties["access_token"].toString())
             buildConfigField("String", "IMAGE_URL", externalProperties["image_url"].toString())
+            buildConfigField("String", "IMAGE_URL_FULL", externalProperties["image_url_full"].toString())
         }
     }
     compileOptions {
@@ -87,6 +89,9 @@ dependencies {
     implementation("androidx.navigation:navigation-runtime-ktx:2.7.7")
     implementation("androidx.core:core-splashscreen:1.0.1")
     implementation("com.google.android.material:material:1.12.0")
+    implementation(libs.androidx.junit.ktx)
+    testImplementation(libs.junit.junit)
+    testImplementation(libs.testng)
     kapt("com.google.dagger:hilt-android-compiler:2.50")
     kapt("androidx.hilt:hilt-compiler:1.2.0")
 
@@ -113,9 +118,12 @@ dependencies {
     // Room components
     implementation("androidx.room:room-runtime:2.6.0")
     kapt("androidx.room:room-compiler:2.6.0")
-
     implementation("androidx.room:room-ktx:2.6.0")
 
+    //Images
+    implementation("io.coil-kt:coil-compose:2.6.0")
+
+    
 }
 
 kapt {

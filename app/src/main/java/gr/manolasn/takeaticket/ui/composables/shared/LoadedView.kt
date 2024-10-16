@@ -14,15 +14,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import gr.manolasn.takeaticket.R
-import gr.manolasn.takeaticket.ui.theme.AppGrey
+import gr.manolasn.takeaticket.ui.theme.AppGreyBlack
 
 @Composable
 fun LoadedView(
     loading:Boolean,
+    error: Boolean = false,
     content: @Composable () -> Unit
 ) {
 
-    if (loading) {
+    if (loading || error) {
+
         Column(modifier = Modifier
             .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -30,14 +32,14 @@ fun LoadedView(
 
             CircularProgressIndicator(
                 modifier = Modifier.size(size = 64.dp),
-                color = AppGrey
+                color = AppGreyBlack
             )
 
             Spacer(modifier = Modifier.width(width = 8.dp))
 
             Text(
                 text = stringResource(id = R.string.please_wait),
-                color = AppGrey
+                color = AppGreyBlack
             )
         }
     }

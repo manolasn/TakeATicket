@@ -2,8 +2,8 @@ package gr.manolasn.takeaticket.data.network.dto.getMovies
 
 import android.os.Build
 import androidx.annotation.RequiresApi
-import gr.manolasn.takeaticket.domain.model.movie.GetMovies
-import gr.manolasn.takeaticket.domain.model.movie.Pagination
+import gr.manolasn.takeaticket.domain.model.movie.getmovies.GetMovies
+import gr.manolasn.takeaticket.domain.model.movie.getmovies.Pagination
 
 data class GetMoviesResponseDto(
     val page: Int = 0,

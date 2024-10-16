@@ -21,26 +21,38 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 import gr.manolasn.takeaticket.R
 import gr.manolasn.takeaticket.ui.composables.shared.TopBar
 import gr.manolasn.takeaticket.ui.theme.White
-import kotlinx.coroutines.delay
 
 @Composable
 fun SplashScreen(
     mainScreen: () -> Unit
 ) {
-
     val scale = remember {
         Animatable(0f)
     }
 
+    // Lottie composition for splash animation
+    val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.splash_anim))
+    // State for Lottie animation progress
+    val progress by animateLottieCompositionAsState(
+        composition = composition,
+        iterations = 1 // Run the animation only once
+    )
+
+    // When progress reaches 1.0f (end of animation), navigate to the main screen
+    LaunchedEffect(progress) {
+        if (progress == 1f) {
+            mainScreen()
+        }
+    }
+
     LaunchedEffect(Unit) {
-        delay(2000L)
+        // Animate the scale effect
         scale.animateTo(targetValue = 1f, animationSpec = tween(durationMillis = 1000, easing = {
             OvershootInterpolator(0f).getInterpolation(it)
         }))
-        delay(1000L)
-        mainScreen()
     }
 
+    // Top bar and main content
     TopBar(
         title = String(),
         hasNavigation = false,
@@ -52,16 +64,13 @@ fun SplashScreen(
                 .background(color = White),
             contentAlignment = Alignment.Center
         ) {
-
-            val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.splash_anim))
-            val progress by animateLottieCompositionAsState(composition)
+            // Lottie animation for splash screen
             LottieAnimation(
                 composition = composition,
                 progress = { progress },
                 modifier = Modifier
                     .fillMaxWidth()
                     .fillMaxHeight(0.8f)
-
             )
         }
     }

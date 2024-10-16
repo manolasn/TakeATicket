@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ripple.LocalRippleTheme
 import androidx.compose.material.ripple.rememberRipple
@@ -28,17 +29,17 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
-import com.bumptech.glide.integration.compose.Placeholder
 import gr.manolasn.takeaticket.R
 import gr.manolasn.takeaticket.common.utils.Constants
 import gr.manolasn.takeaticket.common.utils.NoRippleTheme
-import gr.manolasn.takeaticket.domain.model.movie.Movie
-import gr.manolasn.takeaticket.ui.theme.AppGrey
+import gr.manolasn.takeaticket.domain.model.movie.getmovies.Movie
+import gr.manolasn.takeaticket.ui.theme.AppGreyBlack
 import gr.manolasn.takeaticket.ui.theme.Typography
 
 @OptIn(ExperimentalGlideComposeApi::class)
@@ -46,7 +47,6 @@ import gr.manolasn.takeaticket.ui.theme.Typography
 fun LazyColumnItem(
     movie: Movie,
     isFavoriteEnabled: Boolean = false,
-    onFavoriteClick: () -> Unit = {},
     onClick: () -> Unit = {}
 ) {
 
@@ -95,14 +95,24 @@ fun LazyColumnItem(
                             .fillMaxWidth(0.93f),
                         contentAlignment = Alignment.TopEnd
                     ) {
-                        Image(
-                            modifier = Modifier.clickable {
-                                onFavoriteClick()
-                            }, painter = painterResource(
-                                id = if (movie.isFavorite) R.drawable.favorite_icon
-                                else R.drawable.not_favorite_icon
-                            ), contentDescription = "favorite icon"
-                        )
+                        Box(
+                            modifier = Modifier
+                                .background(
+                                    color = AppGreyBlack,
+                                    shape = RoundedCornerShape(36.dp)
+                                )
+                                .size(36.dp),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Image(
+                                modifier = Modifier.size(20.dp),
+                                painter = painterResource(
+                                    id = if (movie.isFavorite) R.drawable.favorite_icon
+                                    else R.drawable.not_favorite_icon
+                                ),
+                                contentDescription = "favorite icon"
+                            )
+                        }
                     }
                 }
             }
@@ -115,41 +125,35 @@ fun LazyColumnItem(
                 verticalArrangement = Arrangement.Top
             ) {
 
-                Row(
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text(
-                        text = movie.movieName,
-                        style = Typography.bodyLarge,
-                        color = AppGrey,
-                        fontSize = 18.sp,
-                        maxLines = 2,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                }
-                Spacer(Modifier.height(8.dp))
+                Text(
+                    text = movie.movieName,
+                    style = Typography.bodyLarge,
+                    color = AppGreyBlack,
+                    fontSize = 18.sp,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis
+                )
 
+                Spacer(Modifier.height(10.dp))
                 RowImageWithText(
                     image = R.drawable.star,
                     text = movie.rating,
+                    textTitle = stringResource(R.string.user_score),
                     spaceBetween = 8.dp,
+                    textTitleFontSize = 10.sp,
                     maxLines = 1,
+                    isUserScore = true,
                     textFontSize = 14.sp
                 )
-                Spacer(Modifier.height(4.dp))
+                Spacer(Modifier.height(6.dp))
                 RowImageWithText(
                     image = R.drawable.calendar,
                     text = movie.releaseDate,
+                    textTitle = stringResource(R.string.realease_date),
                     maxLines = 1,
+                    isUserScore = false,
                     spaceBetween = 8.dp,
-                    textFontSize = 14.sp
-                )
-                Spacer(Modifier.height(4.dp))
-                RowImageWithText(
-                    image = R.drawable.info,
-                    text = movie.shortDescription,
-                    maxLines = 3,
-                    spaceBetween = 8.dp,
+                    textTitleFontSize = 10.sp,
                     textFontSize = 14.sp
                 )
 

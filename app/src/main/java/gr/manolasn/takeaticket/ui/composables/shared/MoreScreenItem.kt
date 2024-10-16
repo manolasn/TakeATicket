@@ -27,7 +27,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import gr.manolasn.takeaticket.ui.theme.AppGrey
+import gr.manolasn.takeaticket.ui.theme.AppGreyBlack
 import gr.manolasn.takeaticket.ui.theme.Typography
 
 @Composable
@@ -66,7 +66,7 @@ fun MoreScreenItem(
             text = stringResource(id = text),
             style = Typography.bodyMedium,
             fontSize = 14.sp,
-            color = AppGrey
+            color = AppGreyBlack
         )
 
         if(hasArrow) {

@@ -2,15 +2,13 @@ package gr.manolasn.takeaticket.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val AppGrey = Color(0xFF4C4D4F)
+val AppGreyBlack = Color(0xFF222831)
 
 val InsertImage = Color(0xFF969696)
 
 val AreaColor = Color(0xFF061C30)
 
-val AppYellow = Color(0xFFF3BB06)
-
-val ChosenFilterYellow = Color(0xFFDEAA00)
+val AppTeal = Color(0xFF00ADB5)
 
 val Logout = Color(0xFFF7F7F7)
 
@@ -19,6 +17,8 @@ val White = Color(0xFFFFFFFF)
 val OrColor = Color(0xFFACACAC)
 
 val BlackTransparent = Color(0x4D000000)
+
+val TRANSPARENT = Color(0x00000000)
 
 val PaleYellow = Color(0xFFFCF5E3)
 

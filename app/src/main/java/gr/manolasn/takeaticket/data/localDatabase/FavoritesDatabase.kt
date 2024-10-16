@@ -4,11 +4,11 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import gr.manolasn.takeaticket.domain.model.movie.Movie
+import gr.manolasn.takeaticket.domain.model.movie.getmovies.Movie
 
-@Database(entities = [Movie::class], version = 1, exportSchema = false)
+@Database(entities = [Movie::class], version = 5, exportSchema = false)
 abstract class FavoritesDatabase : RoomDatabase() {
-    abstract fun movieDao(): MovieDao
+    abstract fun favoritesDao(): FavoritesDao
 
     companion object {
         @Volatile
@@ -19,7 +19,7 @@ abstract class FavoritesDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     FavoritesDatabase::class.java,
-                    "movie_database"
+                    "favorite_db"
                 ).build()
                 INSTANCE = instance
                 instance

@@ -10,6 +10,6 @@ fun SetStatusBarColor(color: Color) {
     val systemUiController = rememberSystemUiController()
     SideEffect {
         systemUiController.setSystemBarsColor(color = color)
-        systemUiController.setNavigationBarColor(color = AppGrey)
+        systemUiController.setNavigationBarColor(color = AppGreyBlack)
     }
 }
