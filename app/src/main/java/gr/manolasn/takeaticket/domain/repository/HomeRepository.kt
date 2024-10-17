@@ -1,10 +1,10 @@
 package gr.manolasn.takeaticket.domain.repository
 
-import GetSearchMovies
 import gr.manolasn.takeaticket.common.Resource
 import gr.manolasn.takeaticket.common.utils.SortByMethod
 import gr.manolasn.takeaticket.domain.model.movie.getmovies.GetMovies
 import gr.manolasn.takeaticket.domain.model.movie.getmoviedetails.GetMovieDetails
+import gr.manolasn.takeaticket.domain.model.movie.searchMovies.GetSearchMovies
 import kotlinx.coroutines.flow.Flow
 
 interface HomeRepository {

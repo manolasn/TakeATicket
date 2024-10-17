@@ -17,40 +17,47 @@ An Android application that showcases movies using data from [The Movie Database
 
 ## Libraries and Dependencies
 
-The app leverages several modern Android libraries for a robust and scalable architecture:
+The app uses various libraries and dependencies for different purposes:
 
 - **AndroidX Libraries**:
-  - `androidx.core:core-ktx:1.13.1`
-  - `androidx.lifecycle:lifecycle-runtime-ktx:2.8.0`
-  - `androidx.activity:activity-compose:1.9.0`
-  - `androidx.compose:compose-bom:2024.05.00`
-  - `androidx.compose.ui:ui`
-  - `androidx.compose.material3:material3`
-  - `androidx.appcompat:appcompat-resources:1.6.1`
-  - `androidx.navigation:navigation-runtime-ktx:2.7.7`
+  - `libs.androidx.core.ktx`
+  - `libs.androidx.lifecycle.runtime.ktx.v280`
+  - `libs.androidx.activity.compose.v190`
+  - `libs.androidx.appcompat.resources`
+  - `libs.androidx.navigation.runtime.ktx`
+  - `libs.androidx.core.splashscreen`
 
 - **Dependency Injection (Hilt)**:
-  - `com.google.dagger:hilt-android:2.50`
-  - `androidx.hilt:hilt-navigation-compose:1.2.0`
-  - `androidx.hilt:hilt-compiler:1.2.0`
+  - `libs.hilt.android`
+  - `libs.androidx.hilt.compiler`
+  - `libs.hilt.android.compiler`
+  - `libs.androidx.hilt.navigation.compose`
 
 - **Networking**:
-  - `com.squareup.retrofit2:retrofit:2.9.0`
-  - `com.squareup.retrofit2:converter-gson:2.9.0`
-  - `com.squareup.okhttp3:logging-interceptor:4.5.0`
-
-- **Image Loading**:
-  - `com.github.bumptech.glide:compose:1.0.0-alpha.3`
-  - `io.coil-kt:coil-compose:2.6.0`
-
-- **Database**:
-  - `androidx.room:room-runtime:2.6.0`
-  - `androidx.room:room-ktx:2.6.0`
+  - `libs.retrofit`
+  - `libs.converter.gson`
+  - `libs.logging.interceptor`
 
 - **UI Components**:
-  - `com.airbnb.android:lottie-compose:6.3.0`
-  - `com.google.android.material:material:1.12.0`
-  - `com.google.accompanist:accompanist-systemuicontroller:0.32.0`
+  - `libs.compose`
+  - `libs.ui`
+  - `libs.ui.graphics`
+  - `libs.ui.tooling.preview`
+  - `libs.material3`
+  - `libs.accompanist.systemuicontroller`
+  - `libs.lottie.compose`
+
+- **Lifecycle Components**:
+  - `libs.androidx.lifecycle.runtime.compose`
+  - `libs.androidx.lifecycle.viewmodel.compose`
+
+- **Image Loading**:
+  - `libs.coil.compose`
+
+- **Database (Room)**:
+  - `libs.androidx.room.runtime`
+  - `libs.androidx.room.ktx`
+  - `androidx.room:room-compiler:2.6.0`
   
 ## API
 

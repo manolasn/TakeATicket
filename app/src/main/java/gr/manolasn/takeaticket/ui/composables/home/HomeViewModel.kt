@@ -91,7 +91,7 @@ class HomeViewModel @Inject constructor(
         _sortByMethod.update {
             sortByMethod
         }
-        getPage()
+        getMoviesWithPagination()
     }
 
     private fun updatePaginationInfo(pagination: Pagination?) {

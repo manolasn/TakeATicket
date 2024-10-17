@@ -27,7 +27,6 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -73,9 +72,6 @@ fun MovieDetailsScreen(
         stringResource(id = R.string.description),
         stringResource(id = R.string.information),
     )
-
-    val context = LocalContext.current
-
 
 
     CompositionLocalProvider(LocalRippleTheme provides NoRippleTheme) {
