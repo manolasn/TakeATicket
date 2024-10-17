@@ -29,4 +29,20 @@
     <string name="results">Results</string>
     <string name="language">Original Language</string>
     <string name="please_wait">Please wait</string>
+    <string name="confirm">Confirm</string>
+    <string name="select_filter">Select filter</string>
+    <string name="original_title_asc">Original title ascending</string>
+    <string name="original_title_desc">Original title descending</string>
+    <string name="popularity_asc">Popularity ascending</string>
+    <string name="popularity_desc">Popularity descending</string>
+    <string name="revenue_asc">Renevue ascending</string>
+    <string name="revenue_desc">Revenue descending</string>
+    <string name="primary_release_date_asc">Primary release date ascending</string>
+    <string name="primary_release_date_desc">Primary release date descending</string>
+    <string name="title_asc">Title ascending</string>
+    <string name="title_desc">Title descending</string>
+    <string name="vote_average_asc">Vote average ascending</string>
+    <string name="vote_average_desc">Vote average descending</string>
+    <string name="vote_count_asc">Vote count ascending</string>
+    <string name="vote_count_desc">Vote count descending</string>
 </resources>

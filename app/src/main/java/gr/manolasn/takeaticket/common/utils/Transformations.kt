@@ -47,9 +47,9 @@ object Transformations {
         }
     }
 
-    fun formatBigNumberWithCommas(number: Int): String {
+    fun formatBigNumberWithCommas(number: Long): String {
         val formatter = NumberFormat.getNumberInstance(Locale.US)
-        if (number == 0) return "-"
+        if (number == 0L) return "-"
         return formatter.format(number) + " $"
     }
 

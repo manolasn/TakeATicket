@@ -1,8 +1,8 @@
 package gr.manolasn.takeaticket.data.network.dto.searchMovie
 
-import GetSearchMovies
 import android.os.Build
 import androidx.annotation.RequiresApi
+import gr.manolasn.takeaticket.domain.model.movie.searchMovies.GetSearchMovies
 
 data class GetMoviesSearchResponseDto(
     val page: Int = 0,

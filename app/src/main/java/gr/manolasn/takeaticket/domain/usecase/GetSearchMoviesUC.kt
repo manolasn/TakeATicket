@@ -1,7 +1,7 @@
 package gr.manolasn.takeaticket.domain.usecase
 
-import GetSearchMovies
 import gr.manolasn.takeaticket.common.Resource
+import gr.manolasn.takeaticket.domain.model.movie.searchMovies.GetSearchMovies
 import gr.manolasn.takeaticket.domain.repository.HomeRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject

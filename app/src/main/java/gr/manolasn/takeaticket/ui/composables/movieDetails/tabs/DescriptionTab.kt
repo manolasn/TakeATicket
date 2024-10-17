@@ -122,9 +122,9 @@ fun DescriptionTab(
                     modifier = Modifier
                         .background(
                             color = AppGreyBlack,
-                            shape = RoundedCornerShape(6.dp)
+                            shape = RoundedCornerShape(16.dp)
                         )
-                        .padding(4.dp), contentAlignment = Alignment.Center
+                        .padding(8.dp), contentAlignment = Alignment.Center
                 ) {
                     Text(
                         text = movieDetails.genre[item],

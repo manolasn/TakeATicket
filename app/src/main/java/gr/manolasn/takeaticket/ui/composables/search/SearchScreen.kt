@@ -75,9 +75,10 @@ fun SearchScreen(
 
                 OutlinedTextField(modifier = Modifier
                     .fillMaxWidth(0.9f)
-                    .background(color = Color.White, shape = RoundedCornerShape(50))
-                    .shadow(elevation = 16.dp, shape = RoundedCornerShape(50)),
-                    shape = RoundedCornerShape(50),
+                    .height(48.dp)
+                    .background(color = Color.White, shape = RoundedCornerShape(16.dp))
+                    .shadow(elevation = 16.dp, shape = RoundedCornerShape(16.dp)),
+                    shape = RoundedCornerShape(16.dp),
                     value = searchItem,
                     colors = TextFieldDefaults.colors(
                         focusedTextColor = AppTeal,
@@ -91,15 +92,9 @@ fun SearchScreen(
                         searchItem = textFieldValue
                     },
                     trailingIcon = {
-                        IconButton(onClick = { searchItem = TextFieldValue("") }) {
-                            Icon(
-                                imageVector = Icons.Default.Close,
-                                contentDescription = "clear text icon"
-                            )
-                        }
-                    },
-                    leadingIcon = {
-                        IconButton(onClick = {
+                        IconButton(
+                            modifier = Modifier.height(48.dp).background(color = AppGreyBlack, shape = RoundedCornerShape(topEnd = 16.dp, bottomEnd = 16.dp)),
+                            onClick = {
                             viewModel.searchMovies(searchItem.text)
                         }) {
                             Icon(
@@ -108,6 +103,16 @@ fun SearchScreen(
                                 tint = AppTeal
                             )
                         }
+                    },
+                    leadingIcon = {
+
+                        IconButton(onClick = { searchItem = TextFieldValue("") }) {
+                            Icon(
+                                imageVector = Icons.Default.Close,
+                                contentDescription = "clear text icon"
+                            )
+                        }
+
                     })
 
                 Spacer(modifier = Modifier.height(8.dp))

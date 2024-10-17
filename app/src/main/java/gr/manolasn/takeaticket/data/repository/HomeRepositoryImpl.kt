@@ -1,6 +1,5 @@
 package gr.manolasn.takeaticket.data.repository
 
-import GetSearchMovies
 import android.os.Build
 import androidx.annotation.RequiresApi
 import gr.manolasn.takeaticket.App
@@ -12,6 +11,7 @@ import gr.manolasn.takeaticket.data.network.dto.getMovies.toDomain
 import gr.manolasn.takeaticket.data.network.dto.searchMovie.toDomain
 import gr.manolasn.takeaticket.domain.model.movie.getmoviedetails.GetMovieDetails
 import gr.manolasn.takeaticket.domain.model.movie.getmovies.GetMovies
+import gr.manolasn.takeaticket.domain.model.movie.searchMovies.GetSearchMovies
 import gr.manolasn.takeaticket.domain.repository.HomeRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

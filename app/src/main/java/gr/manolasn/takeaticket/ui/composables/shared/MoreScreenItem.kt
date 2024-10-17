@@ -14,7 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.ArrowForward
+import androidx.compose.material.icons.automirrored.outlined.ArrowForward
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -73,7 +73,7 @@ fun MoreScreenItem(
 
             Spacer(modifier = Modifier.weight(1f))
 
-            Image(imageVector = Icons.Outlined.ArrowForward, contentDescription = "arrow icon" )
+            Image(imageVector = Icons.AutoMirrored.Outlined.ArrowForward, contentDescription = "arrow icon" )
         }
 
     }

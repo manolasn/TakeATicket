@@ -20,8 +20,8 @@ android {
         applicationId = "gr.manolasn.takeaticket"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -71,54 +71,54 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.13.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.0")
-    implementation("androidx.activity:activity-compose:1.9.0")
-    implementation(platform("androidx.compose:compose-bom:2024.05.00"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx.v280)
+    implementation(libs.androidx.activity.compose.v190)
+    implementation(platform(libs.androidx.compose.bom.v20240500))
+    implementation(libs.ui)
+    implementation(libs.ui.graphics)
+    implementation(libs.ui.tooling.preview)
+    implementation(libs.material3)
 
     // For loading and tinting drawables on older versions of the platform
-    implementation("androidx.appcompat:appcompat-resources:1.6.1")
+    implementation(libs.androidx.appcompat.resources)
 
     //Hilt - DI
-    implementation("com.google.dagger:hilt-android:2.50")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("androidx.navigation:navigation-runtime-ktx:2.7.7")
-    implementation("androidx.core:core-splashscreen:1.0.1")
-    implementation("com.google.android.material:material:1.12.0")
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.androidx.core.splashscreen)
+    implementation(libs.material)
     implementation(libs.androidx.junit.ktx)
     testImplementation(libs.junit.junit)
     testImplementation(libs.testng)
-    kapt("com.google.dagger:hilt-android-compiler:2.50")
-    kapt("androidx.hilt:hilt-compiler:1.2.0")
+    kapt(libs.hilt.android.compiler)
+    kapt(libs.androidx.hilt.compiler)
 
     // Navigation
-    implementation("androidx.navigation:navigation-compose:2.7.7")
-    implementation ("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation(libs.androidx.navigation.compose.v277)
+    implementation (libs.accompanist.systemuicontroller)
+    implementation(libs.androidx.hilt.navigation.compose)
 
     // Retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.5.0")
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
 
     //Lifecycle
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.0")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
+    implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation (libs.androidx.lifecycle.viewmodel.compose)
 
-    implementation("com.github.bumptech.glide:compose:1.0.0-alpha.3")
-    implementation("com.airbnb.android:lottie-compose:6.3.0")
+    implementation(libs.compose)
+    implementation(libs.lottie.compose)
 
     // Room components
-    implementation("androidx.room:room-runtime:2.6.0")
+    implementation(libs.androidx.room.runtime)
     kapt("androidx.room:room-compiler:2.6.0")
-    implementation("androidx.room:room-ktx:2.6.0")
+    implementation(libs.androidx.room.ktx)
 
     //Images
-    implementation("io.coil-kt:coil-compose:2.6.0")
+    implementation(libs.coil.compose)
 
     
 }
