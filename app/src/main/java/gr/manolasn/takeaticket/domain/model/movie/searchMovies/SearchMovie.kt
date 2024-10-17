@@ -9,6 +9,7 @@ data class SearchMovie(
     val releaseDate: String = String(),
     val shortDescription: String = String(),
     val imageURL: String = String(),
+    val posterURL: String = String(),
     var isFavorite: Boolean = false
 )
 
@@ -20,6 +21,7 @@ fun SearchMovie.toMovie(): Movie {
         releaseDate = releaseDate,
         shortDescription = shortDescription,
         imageURL = imageURL,
+        posterURL = posterURL,
         isFavorite = isFavorite
     )
 }

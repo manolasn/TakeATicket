@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
@@ -34,6 +35,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import gr.manolasn.takeaticket.R
+import gr.manolasn.takeaticket.common.utils.Constants
 import gr.manolasn.takeaticket.common.utils.NoRippleTheme
 import gr.manolasn.takeaticket.domain.model.movie.getmoviedetails.toMovie
 import gr.manolasn.takeaticket.ui.composables.movieDetails.tabs.DescriptionTab
@@ -122,8 +124,8 @@ fun MovieDetailsScreen(
                     GlideImage(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .wrapContentHeight(),
-                        model = movieDetails.imageURL,
+                            .heightIn(0.dp,350.dp),
+                        model = movieDetails.imageURL.ifEmpty { movieDetails.posterURL.ifEmpty { Constants.IMAGE_NOT_FOUNT } },
                         contentDescription = "movieImage",
                         contentScale = ContentScale.Fit,
                     )

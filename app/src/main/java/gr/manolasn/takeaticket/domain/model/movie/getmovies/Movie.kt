@@ -12,5 +12,6 @@ data class Movie(
     val releaseDate: String = String(),
     val shortDescription: String = String(),
     val imageURL: String = String(),
+    val posterURL: String = String(),
     var isFavorite:Boolean = false
 )

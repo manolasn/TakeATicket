@@ -76,16 +76,16 @@ fun LazyColumnItem(
                 contentAlignment = Alignment.Center
             ) {
 
-                if (movie.imageURL.isNotEmpty()) {
-                    GlideImage(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .clip(shape = RoundedCornerShape(10.dp)),
-                        model = movie.imageURL.ifEmpty { Constants.IMAGE_NOT_FOUNT },
-                        contentDescription = "store Image",
-                        contentScale = ContentScale.Crop,
-                    )
-                }
+
+                GlideImage(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .clip(shape = RoundedCornerShape(10.dp)),
+                    model = movie.imageURL.ifEmpty { movie.posterURL.ifEmpty { Constants.IMAGE_NOT_FOUNT } },
+                    contentDescription = "store Image",
+                    contentScale = ContentScale.Crop,
+                )
+
 
 
                 if (isFavoriteEnabled) {

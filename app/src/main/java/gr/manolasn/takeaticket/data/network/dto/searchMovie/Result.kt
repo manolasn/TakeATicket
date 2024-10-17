@@ -14,7 +14,7 @@ data class Result(
     val original_title: String,
     val overview: String?,
     val popularity: Double,
-    val poster_path: String,
+    val poster_path: String?,
     val release_date: String?,
     val title: String?,
     val video: Boolean,
@@ -31,6 +31,7 @@ fun Result.toDomain() : SearchMovie{
         rating = Transformations.formatDouble(vote_average ?: 0.0),
         releaseDate = Transformations.formatDateString(release_date?:"",),
         imageURL = Transformations.backdropToImageURL(backdrop_path?:"",),
+        posterURL = Transformations.backdropToImageURL(poster_path?:""),
         isFavorite = false
     )
 }

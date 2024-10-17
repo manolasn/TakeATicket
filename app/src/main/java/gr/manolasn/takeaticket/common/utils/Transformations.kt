@@ -10,9 +10,15 @@ import java.util.Locale
 
 object Transformations {
 
-    fun backdropToImageURL(backdrop: String): String = BuildConfig.IMAGE_URL + backdrop
+    fun backdropToImageURL(backdrop: String): String {
+        return if (backdrop.isEmpty()) ""
+        else BuildConfig.IMAGE_URL + backdrop
+    }
 
-    fun backdropToFullImageURL(backdrop: String): String = BuildConfig.IMAGE_URL_FULL + backdrop
+    fun backdropToFullImageURL(backdrop: String): String{
+        return if (backdrop.isEmpty()) ""
+        else BuildConfig.IMAGE_URL_FULL + backdrop
+    }
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun formatDateString(dateString: String): String {

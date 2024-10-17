@@ -26,11 +26,12 @@ data class Result(
 fun Result.toDomain(): Movie {
     return Movie(
         id = id.toString(),
-        movieName = title?:"",
-        shortDescription = overview?:"",
+        movieName = title ?: "",
+        shortDescription = overview ?: "",
         rating = Transformations.formatDouble(vote_average ?: 0.0),
-        releaseDate = Transformations.formatDateString(release_date?:"",),
-        imageURL = Transformations.backdropToImageURL(backdrop_path?:"",),
+        releaseDate = Transformations.formatDateString(release_date ?: ""),
+        imageURL = Transformations.backdropToImageURL(backdrop_path ?: ""),
+        posterURL = Transformations.backdropToImageURL(poster_path ?: ""),
         isFavorite = false
     )
 }
