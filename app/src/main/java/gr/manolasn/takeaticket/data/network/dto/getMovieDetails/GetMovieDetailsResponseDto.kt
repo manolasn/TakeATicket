@@ -52,6 +52,7 @@ fun GetMovieDetailsResponseDto.toDomain(): GetMovieDetails {
         productionCompanies = production_companies?.map { it.toDomain() }?.ifEmpty { emptyList() }
             ?: emptyList(),
         imageURL = Transformations.backdropToFullImageURL(backdrop_path ?: ""),
+        posterURL = Transformations.backdropToFullImageURL(poster_path ?: ""),
         genre = genres?.map { it.toDomain() } ?: emptyList()
     )
 }

@@ -15,6 +15,7 @@ data class GetMovieDetails(
     val language: String = String(),
     val productionCompanies: List<Company> = emptyList(),
     val imageURL: String = String(),
+    val posterURL: String = String(),
     val imdbID: String = String(),
     val genre: List<String> = emptyList(),
     var isFavorite: Boolean = false
@@ -26,6 +27,7 @@ fun GetMovieDetails.toMovie(): Movie {
         movieName = movieName,
         rating = userScore,
         releaseDate = releaseDate,
+        posterURL = posterURL,
         shortDescription = shortDescription,
         imageURL = imageURL,
         isFavorite = isFavorite

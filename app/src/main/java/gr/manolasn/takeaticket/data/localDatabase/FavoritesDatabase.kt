@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import gr.manolasn.takeaticket.domain.model.movie.getmovies.Movie
 
-@Database(entities = [Movie::class], version = 5, exportSchema = false)
+@Database(entities = [Movie::class], version = 6, exportSchema = false)
 abstract class FavoritesDatabase : RoomDatabase() {
     abstract fun favoritesDao(): FavoritesDao
 
