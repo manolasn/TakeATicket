@@ -28,7 +28,6 @@ The app leverages several modern Android libraries for a robust and scalable arc
   - `androidx.compose.material3:material3`
   - `androidx.appcompat:appcompat-resources:1.6.1`
   - `androidx.navigation:navigation-runtime-ktx:2.7.7`
-  - `androidx.datastore:datastore-preferences:1.1.1`
 
 - **Dependency Injection (Hilt)**:
   - `com.google.dagger:hilt-android:2.50`
