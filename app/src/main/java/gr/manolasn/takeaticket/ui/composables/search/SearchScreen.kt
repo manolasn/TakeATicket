@@ -10,6 +10,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
@@ -29,6 +31,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -73,11 +76,12 @@ fun SearchScreen(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                OutlinedTextField(modifier = Modifier
-                    .fillMaxWidth(0.9f)
-                    .height(48.dp)
-                    .background(color = Color.White, shape = RoundedCornerShape(16.dp))
-                    .shadow(elevation = 16.dp, shape = RoundedCornerShape(16.dp)),
+                OutlinedTextField(
+                    modifier = Modifier
+                        .fillMaxWidth(0.9f)
+                        .height(48.dp)
+                        .background(color = Color.White, shape = RoundedCornerShape(16.dp))
+                        .shadow(elevation = 16.dp, shape = RoundedCornerShape(16.dp)),
                     shape = RoundedCornerShape(16.dp),
                     value = searchItem,
                     colors = TextFieldDefaults.colors(
@@ -92,9 +96,12 @@ fun SearchScreen(
                         searchItem = textFieldValue
                     },
                     trailingIcon = {
-                        IconButton(
-                            modifier = Modifier.height(48.dp).background(color = AppGreyBlack, shape = RoundedCornerShape(topEnd = 16.dp, bottomEnd = 16.dp)),
-                            onClick = {
+                        IconButton(modifier = Modifier
+                            .height(48.dp)
+                            .background(
+                                color = AppGreyBlack,
+                                shape = RoundedCornerShape(topEnd = 16.dp, bottomEnd = 16.dp)
+                            ), onClick = {
                             viewModel.searchMovies(searchItem.text)
                         }) {
                             Icon(
@@ -113,7 +120,12 @@ fun SearchScreen(
                             )
                         }
 
+                    },
+                    keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+                    keyboardActions = KeyboardActions(onSearch = {
+                        viewModel.searchMovies(searchItem.text)
                     })
+                )
 
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
@@ -126,8 +138,7 @@ fun SearchScreen(
                 )
                 Spacer(modifier = Modifier.height(2.dp))
                 LazyColumn(
-                    modifier = Modifier
-                        .fillMaxSize(),
+                    modifier = Modifier.fillMaxSize(),
                     verticalArrangement = Arrangement.Top,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
